@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  width: 100%;
+  min-height: 1000px;
+  background: url(../img/cool-background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+body main .to-do {
+  align-items: center;
+}
+body main .to-do h1 {
+  color: blue;
+  text-align: center;
+}
+body main .to-do h1 button {
+  background: inherit;
+  border: 0px;
+}
+body main .to-do input {
+  height: 50px;
+  width: 95%;
+  font-size: 30px;
+  margin: 0 10px;
+  background: #9ee4fc;
+}
+body main .to-do ul {
+  font-size: 30px;
+}
+body main .to-do ul li {
+  user-select: none;
+}
+body main .to-do ul li span {
+  font-size: inherit;
+  background: inherit;
+  border: 0px;
+}
+body main .to-do ul li .to-do-trash .icon-trash {
+  display: inline-block;
+  background: center/contain url("../img/trash.png") no-repeat;
+  width: 30px;
+  height: 30px;
+}
+body main .to-do ul .cheked {
+  color: gray;
+  text-decoration: line-through;
+}
+body main .to-do .buttons button {
+  margin: 10px auto;
+  align-items: center;
+  font-size: 30px;
+  border: 0px;
+  background: inherit;
+}
+body main .tips {
+  font-size: 30px;
+  max-width: 450px;
+  margin: 0 auto;
+  border: 0.5px solid gray;
+  border-radius: 10px;
+  background: rgba(129, 129, 129, 0.349);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  position: absolute;
+}
+body main .tips p {
+  max-width: 100%;
+}
+body main ._active {
+  opacity: 10;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 5px;
+  opacity: 10;
+  z-index: 3;
+  transition: all 1s ease-in-out;
+  transform: width(100%);
+  margin-top: 10px;
+  position: inherit;
+}
+
+button:hover {
+  box-shadow: -15px, 5px rebeccapurple;
+  outline: 3px solid #206981;
+  border-radius: 10px;
+}
