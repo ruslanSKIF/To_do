@@ -2,11 +2,6 @@ import * as funcjsFunctions from "./modules/functions.js";
 
 funcjsFunctions.isWebp();
 
-import Swiper, {
-	Navigation,
-	Pagination
-} from 'swiper';
-
 function onPageLoaded() {
 
 	const input = document.querySelector("input[type='text']");
