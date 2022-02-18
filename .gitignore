@@ -1,11 +1,15 @@
 node_modules
 gulp
+// you shouldn't ignore web build configuration like gulpfile or webpack-config
 gulpfile.js
 package-lock.json
 package.json
 test.txt
 test2.txt
 style.min.css
+// what's the sense exclude src foldr but include some filed from the folder? If you want hide some files
+// like 3d party libraries, etc - just put them into separate folder and exclude it. I would recomment not exclude
+// libraries like functions.js etc.
 src/*
 !src/js
 src/js/*
