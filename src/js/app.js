@@ -4,6 +4,7 @@ funcjsFunctions.isWebp();
 
 function onPageLoaded() {
 
+	// it might be dangerious if your TODO use inside another web page that contains inputs with type 'text'. Use ID or class.
 	const input = document.querySelector("input[type='text']");
 	const ul = document.querySelector("ul.todos");
 	const saveBtn = document.querySelector(".save");
@@ -49,17 +50,19 @@ function onPageLoaded() {
 	});
 
 	// Add line throught to the text element 
-	function CheckedTodo(event) {
+	// I think this medod redundant, see my comment about setting listeners directly to `li` tags. 
+	function CheckedTodo(event) { // only classes starts with capital case. Functions starts with lower case.
 		if (event.target.tagName === "LI") {
 			event.target.classList.toggle("cheked");
 		}
 	}
 
+	// I would recommend add listeners directly to 'li' once you created or loaded them (like you did with `listenDeleteTodo`)
 	ul.addEventListener("click", CheckedTodo);
 
 	// Save you list
 	saveBtn.addEventListener('click', () => {
-		localStorage.setItem("todos", ul.innerHTML)
+		localStorage.setItem("todos", ul.innerHTML) // don't save todos as html. Save todos content as text and put inside `textSpan` once todo list loaded
 	})
 
 	// clean all list items
@@ -68,6 +71,8 @@ function onPageLoaded() {
 		ul.innerHTML = "";
 		localStorage.removeItem('todos', ul.innerHTML);
 	});
+
+	// where do you load your todos from localStorage? what happens if user refresh page?
 
 	// show / hide tips
 
