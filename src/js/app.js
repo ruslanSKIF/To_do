@@ -4,7 +4,7 @@ funcjsFunctions.isWebp();
 
 function onPageLoaded() {
 
-	const input = document.querySelector("input[type='text']");
+	const input = document.querySelector("#input");
 	const ul = document.querySelector("ul.todos");
 	const saveBtn = document.querySelector(".save");
 	const cleanUp = document.querySelector(".clean-up");
@@ -49,13 +49,13 @@ function onPageLoaded() {
 	});
 
 	// Add line throught to the text element 
-	function CheckedTodo(event) {
+	function checkedTodo(event) {
 		if (event.target.tagName === "LI") {
 			event.target.classList.toggle("cheked");
 		}
 	}
 
-	ul.addEventListener("click", CheckedTodo);
+	ul.addEventListener("click", checkedTodo);
 
 	// Save you list
 	saveBtn.addEventListener('click', () => {
