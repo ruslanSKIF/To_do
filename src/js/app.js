@@ -48,7 +48,7 @@ function onPageLoaded() {
 		}
 	});
 
-	// Add line throught to the text element 
+	// Add line throught to the text element (delegation of events)
 	function checkedTodo(event) {
 		if (event.target.tagName === "LI") {
 			event.target.classList.toggle("cheked");
@@ -57,13 +57,27 @@ function onPageLoaded() {
 
 	ul.addEventListener("click", checkedTodo);
 
+
 	// Save you list
 	saveBtn.addEventListener('click', () => {
 		localStorage.setItem("todos", ul.innerHTML)
 	})
 
-	// clean all list items
+	// Load list
+	/*
+	function loadTodos() {
+        const data = localStorage.getItem("todos");
+        if (data) {
+            ul.innerHTML = data;
+        }
+        const deleteButtons = document.querySelectorAll("span.to-do-trash");
+        for (const button of deleteButtons) {
+            listenDeleteTodo(button);
+        }
+    }
+	 */
 
+	// clean all list items
 	cleanUp.addEventListener('click', () => {
 		ul.innerHTML = "";
 		localStorage.removeItem('todos', ul.innerHTML);

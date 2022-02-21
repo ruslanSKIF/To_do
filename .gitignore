@@ -1,7 +1,7 @@
+dist
 node_modules
 gulp
 package-lock.json
 package.json
 test.txt
 test2.txt
-dist
