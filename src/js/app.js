@@ -55,7 +55,7 @@ function onPageLoaded() {
 		}
 	}
 
-	ul.addEventListener("click", checkedTodo);
+	ul.addEventListener('click', checkedTodo);
 
 
 	// Save you list
@@ -64,18 +64,18 @@ function onPageLoaded() {
 	})
 
 	// Load list
-	/*
 	function loadTodos() {
-        const data = localStorage.getItem("todos");
-        if (data) {
-            ul.innerHTML = data;
-        }
-        const deleteButtons = document.querySelectorAll("span.to-do-trash");
-        for (const button of deleteButtons) {
-            listenDeleteTodo(button);
-        }
-    }
-	 */
+		const data = localStorage.getItem("todos", ul.innerHTML);
+		if (data) {
+			ul.innerHTML = data;
+		}
+		const deleteButtons = document.querySelectorAll("span.to-do-trash");
+		for (const button of deleteButtons) {
+			listenDeleteTodo(button);
+		}
+	}
+
+	loadTodos()
 
 	// clean all list items
 	cleanUp.addEventListener('click', () => {
